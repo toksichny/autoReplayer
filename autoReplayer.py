@@ -16,7 +16,7 @@ async def main():
         while True:
             successsSendUserReplay = 0
             
-            processed_message = await shelve.open('processed_userID.db', writeback=True)
+            processed_message = shelve.open('processed_userID.db', writeback=True)
             chat_id = await app.get_dialogs()
             for i in range(len(chat_id)):
                 try:  
